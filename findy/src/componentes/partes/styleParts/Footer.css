@@ -1,0 +1,20 @@
+footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #FFFFFE;
+    padding: 16px 0px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    flex-shrink: 0;
+    background-color: #FF7674;
+}
+
+footer img{
+    object-fit: contain;
+    width: 30px;
+}
+
