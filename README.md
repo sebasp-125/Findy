@@ -19,7 +19,9 @@
 
 1. Clona este repositorio: `git clone https://URL-Repositorio.git`
 2. Navega al directorio del proyecto: `cd findy`
-3. Abre el archivo `index.html` en tu navegador web.
+3. En la consola de tu Vs Code, Coloca "npm i". Para que instale las dependencias
+4. Despues ejecuta el proyecto con "npm start"
+3. Y a Disfrutar ❤️.
 
 ## Colaboladores 🤝
 ¡Nos encantaría que contribuyeras a nuestro proyecto!
