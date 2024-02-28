@@ -1,0 +1,70 @@
+body {
+    font-family: Arial, sans-serif;
+}
+.Div_LOGIN {
+    max-width: 40rem;
+    margin: 50px auto;
+    padding: 20px;
+    border: 2px solid #c96666;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+.Label_LOGIN {
+    display: block; 
+    margin-top: 0px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.Input_LOGIN[type="text"],
+.Input_LOGIN[type="password"] {
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box; 
+}
+.Button_LOGIN {
+    width: 37rem;
+    padding: 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: #EB5E5C;
+    color: #fff;
+    cursor: pointer;
+    margin-top:20px ;
+    font-size: 20px;
+    padding-left: 20px;
+}
+.Button_LOGIN:hover {
+    background-color: #ee524f;
+}
+.ContentBTN_LOGIN {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.O_LOGIN {
+    text-align: center;
+    margin: 20px 0;
+}
+.btn-block {
+    display: block;
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width: 390px) {
+    div {
+        max-width: 100%;
+    }
+
+    .Button_LOGIN{
+        width: 20rem;
+    }
+}
+
+
+
