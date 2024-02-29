@@ -10,6 +10,7 @@ export default function Home() {
         {/* si algo crear un div aqui y meter todo menos el footer, igual en todas
         las demas interfaces */}
         <h1>Home</h1>
+        
         <Footer />
     </div>
   )

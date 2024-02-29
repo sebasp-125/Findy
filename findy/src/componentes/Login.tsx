@@ -13,7 +13,7 @@ export const Login = () => {
             <label className='Label_LOGIN'>Login</label>
             <input className='Input_LOGIN' type="text" placeholder='Ingrese Nombre Usuarios' />
             <input className='Input_LOGIN' type="password" placeholder="Ingrese su Contraseña" />
-            <div className='Content'>
+            <div className='ContentBTN_LOGIN'>
                 <button className='Button_LOGIN' onClick={() => navigate('/Home')}>Log</button>
                 <h3 className='O_LOGIN'>o</h3>
                 <button className='Button_LOGIN' onClick={() => navigate('/Register')}>Register</button>
