@@ -31,11 +31,6 @@ const Footer = () => {
                     <img src="https://res.cloudinary.com/dtmapxnao/image/upload/v1709072539/workshop/Ellipse_13_uain7y.png" alt='Img'/>
                 </div>
             </span>
-            <span onClick={() => navigate('/Chat')}>
-                <div>
-                    <img src="https://i.pravatar.cc/150?u=hola" alt='Img'/>
-                </div>
-            </span>
         </footer>
     );
 };

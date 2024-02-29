@@ -4,6 +4,7 @@ import '../styles/Home.css';
 import Footer from './partes/Footer';
 
 export default function Home() {
+  const navigate = useNavigate();
   return (
     //dejar este div quiero para que no se dañe na xd
     <div>
@@ -15,7 +16,7 @@ export default function Home() {
             <img src="https://res.cloudinary.com/dtmapxnao/image/upload/v1709155989/Cosiaco/LOGOLOGO_3_1_eqqgah.png" alt="log" />
             <div className='contLClog'>
               <img className='imgLClog' src="https://res.cloudinary.com/dtmapxnao/image/upload/v1709155914/Cosiaco/Vector_borys0_kj6x4q.png" alt="likelog" />
-              <img className='imgLClog' src="https://res.cloudinary.com/dtmapxnao/image/upload/v1709155916/Cosiaco/Vector_1_vxjbwp_xhe7dn.png" alt="chatlog" />
+              <img className='imgLClog' src="https://res.cloudinary.com/dtmapxnao/image/upload/v1709155916/Cosiaco/Vector_1_vxjbwp_xhe7dn.png" onClick={() => navigate('/Chat')} alt="chatlog" />
             </div>
           </div>
           {/*contenedor para storys*/}
