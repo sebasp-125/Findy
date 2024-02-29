@@ -1,0 +1,65 @@
+.sidebar {
+    width: 250px;
+    height: 100%;
+    background-color: #f1f1f1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+    border-right: 1px solid #ccc;
+}
+
+.menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.Item_Chat {
+    padding: 20px;
+    border-bottom: 1px solid #a14646;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.Item_Chat img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+    float: left;
+}
+
+.Item_Chat h2 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.Item_Chat p {
+    margin: 5px 0 0;
+    font-size: 14px;
+}
+
+.menu-item {
+    cursor: pointer;
+    padding: 10px;
+    transition: background-color 0.3s;
+}
+
+.menu-item:hover {
+    background-color: #ddd;
+}
+
+.toggle-btn {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 999;
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 390px) {
+
+}
