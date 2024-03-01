@@ -28,6 +28,26 @@ const actionCreatePublicationSyn = (payload: any) => {
     };
 };
 
+// ----------------- DELETE A PUBLICATION ------------------ //
+
+export const actionDeletePublicationAsync = (payload: string) => {
+    return async (dispatch: any) => {
+        try {
+            const publicationDocRef = doc(dataBase, "Publications", payload);
+            await deleteDoc(publicationDocRef);
+            dispatch(actionDeletePublicationSyn(payload));
+        } catch (error) {
+            console.error("Error al eliminar la publicación:", error);
+        }
+    };
+};
+const actionDeletePublicationSyn = (payload: any) => {
+    return {
+        type: typesPublications.delete,
+        payload,
+    };
+};
+
 // ----------------- READ ONE PUBLICATION ------------------ //
 
 export const actionReadPublicationAsync = (payload: string) => {
@@ -113,26 +133,7 @@ const actionUpdatePublicationSyn = (payload: any) => {
     };
 };
 
-// ----------------- DELETE A PUBLICATION ------------------ //
 
-export const actionDeletePublicationAsync = (payload: string) => {
-    return async (dispatch: any) => {
-        try {
-            const publicationDocRef = doc(dataBase, "Publications", payload);
-            await deleteDoc(publicationDocRef);
-            dispatch(actionDeletePublicationSyn(payload));
-        } catch (error) {
-            console.error("Error al eliminar la publicación:", error);
-        }
-    };
-};
-
-const actionDeletePublicationSyn = (payload: any) => {
-    return {
-        type: typesPublications.delete,
-        payload,
-    };
-};
 
 // ----------------- ADD COMMENT ------------------------- //
 export const actionAddCommentAsync = (publicationId: string, comment: string) => {

@@ -1,82 +1,91 @@
 .contPrinHome {
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-    flex-direction: column;
-    overflow-x: hidden; /* Evita el desplazamiento horizontal en el contenedor principal */
-  }
-  
-  .contLog {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-  }
-  
-  .contLClog {
-    display: flex;
-    gap: 16px;
-  }
-  
-  /*aqui termina el cont quel logo*/
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  flex-direction: column;
+  overflow-x: hidden;
+  /* Evita el desplazamiento horizontal en el contenedor principal */
+}
 
-  .imgLClog {
-    object-fit: contain;
-  }
-  
-  .contStorys {
-    display: flex;
-    justify-content: start;
-    padding: 10px;
-    gap: 30px;
-    overflow-x: auto; /* Agrega una barra de desplazamiento horizontal si es necesario */
-    flex-wrap: nowrap; /* Evita que los elementos se envuelvan a la siguiente línea */
-  }
-  
-  .circulitoStory {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 89px;
-  }
-  
-  .imgSt {
-    width: auto;
-  }
-  
-  .nameSt {
-    text-align: center;
-    margin: 0;
-  }
-  /*aqui termina el contenedor de las historias*/
-  .contNameImgUPublic{
-    display: flex;
-    margin-top: 5px;
-    margin-bottom: 8px;
-  }
- .imgUPublic{
-    width: 8%;
-    margin-right: 2%;
- }
- .nameUPublic{
-    margin: 0;
- }
+.contLog {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
 
- /* iconos */
- .contIconosPublic{
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
- }
- .contIconos{
-    display: flex;
-    gap: 20px;
- }
-.contPublicIni{
-    margin-bottom: 8%;
+.contLClog {
+  display: flex;
+  gap: 16px;
+}
+
+/*aqui termina el cont quel logo*/
+
+.imgLClog {
+  object-fit: contain;
+}
+
+.contStorys {
+  display: flex;
+  justify-content: start;
+  padding: 10px;
+  gap: 30px;
+  overflow-x: auto;
+  /* Agrega una barra de desplazamiento horizontal si es necesario */
+  flex-wrap: nowrap;
+  /* Evita que los elementos se envuelvan a la siguiente línea */
+}
+
+.circulitoStory {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 89px;
+}
+
+.imgSt {
+  width: auto;
+}
+
+.nameSt {
+  text-align: center;
+  margin: 0;
+}
+
+/*aqui termina el contenedor de las historias*/
+.contNameImgUPublic {
+  display: flex;
+  margin-top: 5px;
+  margin-bottom: 8px;
+}
+
+.imgUPublic {
+  width: 8%;
+  margin-right: 2%;
+}
+
+.nameUPublic {
+  margin: 0;
+}
+
+/* iconos */
+.contIconosPublic {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.contIconos {
+  display: flex;
+  gap: 20px;
+}
+
+.contPublicIni {
+  margin-bottom: 8%;
 }
 
 .titulo-parrafo h3,
 .titulo-parrafo p {
   display: inline;
-  margin: 0; /* Ajusta los márgenes según sea necesario */
+  margin: 0;
+  /* Ajusta los márgenes según sea necesario */
 }
