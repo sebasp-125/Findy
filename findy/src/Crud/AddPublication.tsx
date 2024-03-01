@@ -26,7 +26,7 @@ export default function AddPublication() {
       // Generar un nombre único basado en el contador
       const uniqueName = new_Name;
       console.log(new_Name);
-      
+
       dispatch(actionCreatePublicationAsync({
         Media: formValues.Media,
         Description: formValues.Description,
@@ -36,8 +36,17 @@ export default function AddPublication() {
         ActionsPublication: uniqueName
       }));
 
+
+      // Genera un número aleatorio del 1 al 10
+      const generarNumeroAleatorio = () => {
+        return Math.floor(Math.random() * 10) + 1;
+
+      };
+      const NumberRandom = generarNumeroAleatorio()
+      console.log(NumberRandom);
+
       // Incrementar el contador para la próxima publicación
-      setPublicationCount(publicationCount + 1);
+      setPublicationCount(NumberRandom);
       setPublications(recuperacionPublication);
 
       switch (publicationCount) {
@@ -74,7 +83,7 @@ export default function AddPublication() {
         default:
           SetName("Unknown");
       }
-      
+
     } catch (error) {
       console.error('Error al recuperar las publicaciones:', error);
     }
