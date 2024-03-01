@@ -8,7 +8,7 @@ import { actionListPublicationsAsync } from '../redux/Actions/ActionPublication'
 export default function Home() {
   const dispatch: any = useDispatch();
   const navigate = useNavigate();
-  const [Datos, SetDatos] = useState();
+  const [Datos, SetDatos] = useState<[]>([]);
 
 
   const RecuperarDatosPublications = async () => {
@@ -16,7 +16,7 @@ export default function Home() {
     SetDatos(recuperacionPublication)
     console.log(Datos);
     console.log(recuperacionPublication);
-    
+
   }
 
   useEffect(() => {
@@ -65,90 +65,51 @@ export default function Home() {
 
         {/*contenedor para el feed*/}
         <div>
-          {/*contenedor publicacion*/}
-          <div className='contPublicIni'>
-            {/*contenedor del nombre e imagen de usuario*/}
-            <div className='contNameImgUPublic'>
-              <img className='imgUPublic' src="https://res.cloudinary.com/dtmapxnao/image/upload/v1709157723/Cosiaco/Group_2_e26s2i_d5wryo.png" alt="" />
-              <h3 className='nameUPublic'>Jennie Kim</h3>
-            </div>
-            {/*imagen de la publicacion*/}
-            <img src="https://res.cloudinary.com/dtmapxnao/image/upload/v1709157528/Cosiaco/Group_11_du3hyj_hlzn8q.png" alt="" />
-            {/*seccion de iconos y guardado*/}
-            <div className='contIconosPublic'>
-              {/*iconos normales*/}
-              <div className='contIconos'>
-                {/*icono like*/}
-                <div>
-                  <img src="https://res.cloudinary.com/dtmapxnao/image/upload/v1709155914/Cosiaco/Vector_borys0_kj6x4q.png" alt="" />
-                  <p className='nameSt'>253</p>
-                </div>
-                {/*icono coment*/}
-                <div>
-                  <img src="https://res.cloudinary.com/dtmapxnao/image/upload/v1709155916/Cosiaco/Vector_1_w8alyp_gn0ymc.png" alt="" />
-                  <p className='nameSt'>112</p>
-                </div>
-                {/*icono compartir*/}
-                <div>
-                  <img src="https://res.cloudinary.com/dtmapxnao/image/upload/v1709155914/Cosiaco/Vector_qaipdy_pcawai.png" alt="" />
-                  <p className='nameSt'>187</p>
-                </div>
-              </div>
-              {/*guardar*/}
+          {
+            Datos.map((Datos:any) => (
               <div>
-                <img src="https://res.cloudinary.com/dtmapxnao/image/upload/v1709162721/Cosiaco/Vector_5_p18mr3.png" alt="" />
+              {/*contenedor del nombre e imagen de usuario*/}
+              <div className='contNameImgUPublic'>
+                <img className='imgUPublic' src="https://res.cloudinary.com/dtmapxnao/image/upload/v1709157723/Cosiaco/Group_2_e26s2i_d5wryo.png" alt="" />
+                <h3 className='nameUPublic'>{Datos.ActionsPublication}</h3>
+              </div>
+              {/*imagen de la publicacion*/}
+              <img className='ImagenPUBLICATION' src={Datos.Media} alt="" />
+              {/*seccion de iconos y guardado*/}
+              <div className='contIconosPublic'>
+                {/*iconos normales*/}
+                <div className='contIconos'>
+                  {/*icono like*/}
+                  <div>
+                    <img src="https://res.cloudinary.com/dtmapxnao/image/upload/v1709155914/Cosiaco/Vector_borys0_kj6x4q.png" alt="" />
+                    <p className='nameSt'>253</p>
+                  </div>
+                  {/*icono coment*/}
+                  <div>
+                    <img src="https://res.cloudinary.com/dtmapxnao/image/upload/v1709155916/Cosiaco/Vector_1_w8alyp_gn0ymc.png" alt="" />
+                    <p className='nameSt'>112</p>
+                  </div>
+                  {/*icono compartir*/}
+                  <div>
+                    <img src="https://res.cloudinary.com/dtmapxnao/image/upload/v1709155914/Cosiaco/Vector_qaipdy_pcawai.png" alt="" />
+                    <p className='nameSt'>187</p>
+                  </div>
+                </div>
+                {/*guardar*/}
+                <div>
+                  <img src="https://res.cloudinary.com/dtmapxnao/image/upload/v1709162721/Cosiaco/Vector_5_p18mr3.png" alt="" />
+                </div>
+              </div>
+              {/*descripcion*/}
+              <div className="titulo-parrafo">
+                <h3>{Datos.ActionsPublication}</h3>
+                <p>{Datos.Description}</p>
+                {/* <h1>{Datos.UID}</h1> */}
               </div>
             </div>
-            {/*descripcion*/}
-            <div className="titulo-parrafo">
-              <h3>Jennie Kim  </h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing
-                elit. Facilisi ullamcorper aliquam augue fermentum, vel, risus, adipiscing.
-                Tellus vestibulum magnis ut elit, vitae mattis sapien. Laoreet nam....</p>
-            </div>
-          </div>
+            ))
+          }
           {/*aqui termina el contenedor de una publicacion*/}
-          <div>
-            {/*contenedor del nombre e imagen de usuario*/}
-            <div className='contNameImgUPublic'>
-              <img className='imgUPublic' src="https://res.cloudinary.com/dtmapxnao/image/upload/v1709157723/Cosiaco/Group_2_e26s2i_d5wryo.png" alt="" />
-              <h3 className='nameUPublic'>Jennie Kim</h3>
-            </div>
-            {/*imagen de la publicacion*/}
-            <img src="https://res.cloudinary.com/dtmapxnao/image/upload/v1709157528/Cosiaco/Group_11_du3hyj_hlzn8q.png" alt="" />
-            {/*seccion de iconos y guardado*/}
-            <div className='contIconosPublic'>
-              {/*iconos normales*/}
-              <div className='contIconos'>
-                {/*icono like*/}
-                <div>
-                  <img src="https://res.cloudinary.com/dtmapxnao/image/upload/v1709155914/Cosiaco/Vector_borys0_kj6x4q.png" alt="" />
-                  <p className='nameSt'>253</p>
-                </div>
-                {/*icono coment*/}
-                <div>
-                  <img src="https://res.cloudinary.com/dtmapxnao/image/upload/v1709155916/Cosiaco/Vector_1_w8alyp_gn0ymc.png" alt="" />
-                  <p className='nameSt'>112</p>
-                </div>
-                {/*icono compartir*/}
-                <div>
-                  <img src="https://res.cloudinary.com/dtmapxnao/image/upload/v1709155914/Cosiaco/Vector_qaipdy_pcawai.png" alt="" />
-                  <p className='nameSt'>187</p>
-                </div>
-              </div>
-              {/*guardar*/}
-              <div>
-                <img src="https://res.cloudinary.com/dtmapxnao/image/upload/v1709162721/Cosiaco/Vector_5_p18mr3.png" alt="" />
-              </div>
-            </div>
-            {/*descripcion*/}
-            <div className="titulo-parrafo">
-              <h3>Jennie Kim  </h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing
-                elit. Facilisi ullamcorper aliquam augue fermentum, vel, risus, adipiscing.
-                Tellus vestibulum magnis ut elit, vitae mattis sapien. Laoreet nam....</p>
-            </div>
-          </div>
         </div>
       </div>
       <Footer />

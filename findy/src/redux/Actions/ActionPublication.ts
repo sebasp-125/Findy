@@ -7,10 +7,12 @@ import { getAuth } from "firebase/auth";
 
 export const actionCreatePublicationAsync = (payload: object) => {
     return async (dispatch: any) => {
+        const ID_usuario = getAuth()
         try {
             const publicationDocRef = doc(dataBase, "Publications", crypto.randomUUID());
             const newPublication = {
                 ...payload,
+                UID: ID_usuario.currentUser?.uid,
                 Id: publicationDocRef.id,
             };
             await setDoc(publicationDocRef, newPublication);
