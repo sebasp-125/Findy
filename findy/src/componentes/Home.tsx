@@ -16,7 +16,6 @@ export default function Home() {
     SetDatos(recuperacionPublication)
     console.log(Datos);
     console.log(recuperacionPublication);
-
   }
 
   useEffect(() => {

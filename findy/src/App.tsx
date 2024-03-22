@@ -9,7 +9,7 @@ import Perfil from './componentes/Perfil';
 import NewPublish from './componentes/NewPublish';
 import Chat from './componentes/Chat';
 import AddPublication from './Crud/AddPublication';
-
+import EditProfile from './Crud/EditProfile';
 
 function App() {
   return (
@@ -24,6 +24,8 @@ function App() {
         <Route path='/Chat' element={<Chat />} />
         <Route path='NewPublish' element={<NewPublish />} />
         <Route path='/prueba' element={<AddPublication />} />
+        <Route path='/prueba' element={<AddPublication />} />
+
       </Routes>
     </Router>
   );
