@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { actionCreatePublicationAsync, actionDeletePublicationAsync, actionListPublicationsAsync } from '../redux/Actions/ActionPublication';
+import '../styles/PublicationAdd.css'
 
 interface Publication {
   Id: string;
