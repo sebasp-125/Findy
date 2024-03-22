@@ -25,7 +25,6 @@ export default function AddPublication() {
       // Generar un nombre único basado en el contador
       const uniqueName = new_Name;
       console.log(new_Name);
-
       dispatch(actionCreatePublicationAsync({
         Media: formValues.Media,
         Description: formValues.Description,
@@ -82,7 +81,6 @@ export default function AddPublication() {
         default:
           SetName("Unknown");
       }
-
     } catch (error) {
       console.error('Error al recuperar las publicaciones:', error);
     }

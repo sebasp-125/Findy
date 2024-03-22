@@ -17,7 +17,7 @@
 
 ## Instalación 🛠️
 
-1. Clona este repositorio: `git clone https://URL-Repositorio.git`
+1. Clona este repositorio: `https://github.com/sebasp-125/Findy.git`
 2. Navega al directorio del proyecto: `cd findy`
 3. En la consola de tu Vs Code, Coloca "npm i". Para que instale las dependencias
 4. Despues ejecuta el proyecto con "npm start"
