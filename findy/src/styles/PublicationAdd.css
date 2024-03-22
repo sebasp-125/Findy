@@ -1,0 +1,42 @@
+/* Estilos para la tabla */
+table {
+    width: 100%;
+    /* Ancho completo */
+    border-collapse: collapse;
+    /* Colapsar bordes */
+}
+
+/* Estilos para las celdas de encabezado */
+th {
+    text-align: center;
+    background-color: #f2f2f2;
+    /* Color de fondo */
+    color: #333;
+    /* Color del texto */
+    font-weight: bold;
+    /* Peso de la fuente */
+    padding: 8px;
+    /* Espaciado interior */
+    border: 1px solid red;
+}
+
+/* Estilos para las celdas de datos */
+td {
+    width: 20px;
+    padding: 8px;
+    /* Espaciado interior */
+    border: 1px solid red;
+
+}
+
+/* Estilos para las imágenes */
+.imgPublicadas {
+    max-width: 100px;
+    /* Ancho máximo */
+    height: auto;
+    /* Altura automática */
+    display: block;
+    /* Mostrar como bloque */
+    margin: 0 auto;
+    /* Margen automático en los lados */
+}

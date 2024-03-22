@@ -7,10 +7,12 @@ import { getAuth } from "firebase/auth";
 
 export const actionCreatePublicationAsync = (payload: object) => {
     return async (dispatch: any) => {
+        const ID_usuario = getAuth()
         try {
             const publicationDocRef = doc(dataBase, "Publications", crypto.randomUUID());
             const newPublication = {
                 ...payload,
+                UID: ID_usuario.currentUser?.uid,
                 Id: publicationDocRef.id,
             };
             await setDoc(publicationDocRef, newPublication);
@@ -24,6 +26,26 @@ export const actionCreatePublicationAsync = (payload: object) => {
 const actionCreatePublicationSyn = (payload: any) => {
     return {
         type: typesPublications.add,
+        payload,
+    };
+};
+
+// ----------------- DELETE A PUBLICATION ------------------ //
+
+export const actionDeletePublicationAsync = (payload: string) => {
+    return async (dispatch: any) => {
+        try {
+            const publicationDocRef = doc(dataBase, "Publications", payload);
+            await deleteDoc(publicationDocRef);
+            dispatch(actionDeletePublicationSyn(payload));
+        } catch (error) {
+            console.error("Error al eliminar la publicación:", error);
+        }
+    };
+};
+const actionDeletePublicationSyn = (payload: any) => {
+    return {
+        type: typesPublications.delete,
         payload,
     };
 };
@@ -113,26 +135,7 @@ const actionUpdatePublicationSyn = (payload: any) => {
     };
 };
 
-// ----------------- DELETE A PUBLICATION ------------------ //
 
-export const actionDeletePublicationAsync = (payload: string) => {
-    return async (dispatch: any) => {
-        try {
-            const publicationDocRef = doc(dataBase, "Publications", payload);
-            await deleteDoc(publicationDocRef);
-            dispatch(actionDeletePublicationSyn(payload));
-        } catch (error) {
-            console.error("Error al eliminar la publicación:", error);
-        }
-    };
-};
-
-const actionDeletePublicationSyn = (payload: any) => {
-    return {
-        type: typesPublications.delete,
-        payload,
-    };
-};
 
 // ----------------- ADD COMMENT ------------------------- //
 export const actionAddCommentAsync = (publicationId: string, comment: string) => {
